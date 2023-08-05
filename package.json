@@ -1,0 +1,31 @@
+{
+  "name": "tsmi",
+  "version": "0.1.0",
+  "description": "Better Misskey API Client for TypeScript/JavaScript",
+  "main": "dist/main.js",
+  "scripts": {
+    "lint": "eslint src --fix",
+    "format": "prettier --write src/",
+    "build-docs": "typedoc --plugin typedoc-plugin-rename-defaults --entryPointStrategy expand src/"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "8.45.0",
+    "eslint-config-prettier": "8.8.0",
+    "prettier": "3.0.0",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.24.8",
+    "typedoc-plugin-rename-defaults": "^0.6.5",
+    "typescript": "^5.1.6"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "uuid": "^9.0.0",
+    "websocket-reconnect": "^1.0.7"
+  }
+}
