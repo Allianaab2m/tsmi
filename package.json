@@ -1,14 +1,11 @@
 {
-  "name": "@allianaab2m/tsmi",
+  "name": "tsmi",
   "version": "0.2.0",
   "license": "MIT",
   "description": "Better Misskey API Client for TypeScript/JavaScript",
   "repository": {
     "type": "git",
     "url": "https://github.com/Allianaab2m/tsmi"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@allianaab2m"
   },
   "files": [
     "dist"
