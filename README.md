@@ -28,7 +28,15 @@ client.once("ready", async (me) => {
   console.log("Logged in with @", user.name);
 });
 
-client.on("noteCreate", (note) => {
+client.on("noteCreate", (note, timeline) => {
+  if (timeline === "localTimeline") {
+    console.log(note); // Only take local timeline notes
+  }
+});
+
+// equalivant
+
+client.stream.local.on("noteCreate", (note) => {
   console.log(note);
 });
 ```
