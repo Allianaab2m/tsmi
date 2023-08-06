@@ -52,8 +52,12 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
       `${this.config.host.replace("https", "wss")}?i=${this.config.token}`,
     );
 
+    let login = false;
+
     this.websocket.on("open", () => {
+      if (login) return;
       this.emit("ready", this);
+      login = true;
     });
 
     webSocketHandler(this.config.channels, this.websocket, this);
