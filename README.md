@@ -19,7 +19,6 @@ import Client from "tsmi";
 const client = new Client({
   host: "https://<your-misskey-server-url>",
   token: "<YOUR_TOKEN_HERE>",
-  channels: ["main", "localTimeline"],
 });
 
 client.once("ready", async (me) => {
