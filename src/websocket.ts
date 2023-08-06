@@ -1,8 +1,9 @@
-import type { WsReconnect } from "websocket-reconnect";
+//import type { WsReconnect } from "websocket-reconnect";
 import Client from "./client";
 import { INote } from "./models/note";
 import { IUserLite } from "./models/user";
 import { AnyNotification, MentionNotification } from "./models/notification";
+import ReconnectingWebSocket from "reconnecting-websocket";
 
 export type WebSocketChannels =
   | "main"
@@ -13,7 +14,8 @@ export type WebSocketChannels =
 
 export const webSocketHandler = (
   channels: Array<WebSocketChannels>,
-  ws: WsReconnect,
+  //ws: WsReconnect,
+  ws: ReconnectingWebSocket,
   client: Client,
 ) => {
   channels.forEach((c) => {
@@ -27,8 +29,9 @@ export const webSocketHandler = (
       }),
     );
   });
-  ws.on("message", (data) => {
-    const message = JSON.parse(data);
+  //ws.on("message", (data) => {
+  ws.addEventListener("message", (messageEvent) => {
+    const message = JSON.parse(messageEvent.data);
 
     (() => {
       switch (message.body.type) {
