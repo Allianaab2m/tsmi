@@ -10,8 +10,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@allianaab2m"
   },
+  "files": ["dist"],
   "main": "dist/main.js",
   "scripts": {
+    "build": "tsc",
     "lint": "eslint src --fix",
     "format": "prettier --write src/",
     "build-docs": "typedoc --plugin typedoc-plugin-rename-defaults --entryPointStrategy expand src/"
