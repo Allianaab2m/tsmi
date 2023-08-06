@@ -1,7 +1,15 @@
 {
-  "name": "tsmi",
+  "name": "@allianaab2m/tsmi",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "Better Misskey API Client for TypeScript/JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Allianaab2m/tsmi"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@allianaab2m"
+  },
   "main": "dist/main.js",
   "scripts": {
     "lint": "eslint src --fix",
@@ -22,7 +30,6 @@
     "typedoc-plugin-rename-defaults": "^0.6.5",
     "typescript": "^5.1.6"
   },
-  "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0",
     "uuid": "^9.0.0",
