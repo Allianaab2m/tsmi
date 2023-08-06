@@ -26,9 +26,11 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">TypedEventEmitter</span>
 <ul class="tsd-hierarchy">
-<li><a href="client.Client.html" class="tsd-signature-type tsd-kind-class">Client</a></li></ul></li></ul></section><aside class="tsd-sources">
+<li><a href="client.Client.html" class="tsd-signature-type tsd-kind-class">Client</a></li>
+<li><a href="stream.Connection.html" class="tsd-signature-type tsd-kind-class">Connection</a></li>
+<li><a href="stream.Stream.html" class="tsd-signature-type tsd-kind-class">Stream</a></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L3">src/eventemitter.ts:3</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L3">src/eventemitter.ts:3</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -41,6 +43,7 @@
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
 <div class="tsd-index-list"><a href="eventemitter.TypedEventEmitter.html#emitter" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-1024"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)"></path></g></svg><span>emitter</span></a>
+<a href="eventemitter.TypedEventEmitter.html#removeAllListeners" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
@@ -60,14 +63,37 @@
 <ul class="tsd-type-parameter-list">
 <li>
 <h4><span class="tsd-kind-type-parameter">TEvents</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></section>
-<h4 class="tsd-returns-title">Returns <a href="eventemitter.TypedEventEmitter.html" class="tsd-signature-type tsd-kind-class">TypedEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TEvents</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></section></section>
+<h4 class="tsd-returns-title">Returns <a href="eventemitter.TypedEventEmitter.html" class="tsd-signature-type tsd-kind-class">TypedEventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TEvents</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L6">src/eventemitter.ts:6</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="emitter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>emitter</span><a href="#emitter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">emitter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">emitter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L4">src/eventemitter.ts:4</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L4">src/eventemitter.ts:4</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member"><a id="removeAllListeners" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>remove<wbr/>All<wbr/>Listeners</span><a href="#removeAllListeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">remove<wbr/>All<wbr/>Listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures">
+<li class="tsd-signature" id="removeAllListeners.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Remove all listeners, or those of the specified event.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L5">src/eventemitter.ts:5</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="emit" class="tsd-anchor"></a>
@@ -89,7 +115,7 @@
 <h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">eventArg</span>: <span class="tsd-signature-type tsd-kind-type-parameter">TEvents</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol">]</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L6">src/eventemitter.ts:6</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L10">src/eventemitter.ts:10</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="off" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>off</span><a href="#off" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -120,7 +146,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L20">src/eventemitter.ts:20</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L24">src/eventemitter.ts:24</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="on" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on</span><a href="#on" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -151,7 +177,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L13">src/eventemitter.ts:13</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/abb8b79/src/eventemitter.ts#L17">src/eventemitter.ts:17</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -173,6 +199,7 @@
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
 <li><a href="#emitter" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>emitter</span></a></li>
+<li><a href="#removeAllListeners" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a></li>
 <li><a href="#emit" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>emit</span></a></li>
 <li><a href="#off" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>off</span></a></li>
 <li><a href="#on" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>on</span></a></li></ul></div></details></div>
@@ -197,8 +224,8 @@
 <li><a href="../modules/models_notification.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>models/notification</span></a></li>
 <li><a href="../modules/models_reaction.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>models/reaction</span></a></li>
 <li><a href="../modules/models_user.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>models/user</span></a></li>
-<li><a href="../modules/utils_objFalsyValueRemove.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>utils/obj<wbr/>Falsy<wbr/>Value<wbr/>Remove</span></a></li>
-<li><a href="../modules/websocket.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>websocket</span></a></li></ul></nav></div></div></div>
+<li><a href="../modules/stream.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>stream</span></a></li>
+<li><a href="../modules/utils_objFalsyValueRemove.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>utils/obj<wbr/>Falsy<wbr/>Value<wbr/>Remove</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div></body></html>

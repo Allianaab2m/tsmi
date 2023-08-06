@@ -1,7 +1,11 @@
-import { EventEmitter } from "events";
+import { EventEmitter } from "eventemitter3";
 
 export default class TypedEventEmitter<TEvents extends Record<string, any>> {
   private emitter = new EventEmitter();
+  public removeAllListeners;
+  constructor() {
+    this.removeAllListeners = this.emitter.removeAllListeners;
+  }
 
   emit<TEventName extends keyof TEvents & string>(
     eventName: TEventName,
