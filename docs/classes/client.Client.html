@@ -23,7 +23,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">Client</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L37">src/client.ts:37</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L34">src/client.ts:34</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -38,13 +38,13 @@
 <div class="tsd-index-list"><a href="client.Client.html#config" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-1024"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)"></path></g></svg><span>config</span></a>
 <a href="client.Client.html#note" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>note</span></a>
 <a href="client.Client.html#reaction" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>reaction</span></a>
+<a href="client.Client.html#removeAllListeners" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a>
+<a href="client.Client.html#stream" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>stream</span></a>
 <a href="client.Client.html#user" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>user</span></a>
-<a href="client.Client.html#websocket" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>websocket</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
 <div class="tsd-index-list"><a href="client.Client.html#emit" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-2048"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)"></path></g></svg><span>emit</span></a>
-<a href="client.Client.html#login" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>login</span></a>
 <a href="client.Client.html#off" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>off</span></a>
 <a href="client.Client.html#on" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>on</span></a>
 </div></section></div></details></section></section>
@@ -63,34 +63,56 @@
 <h4 class="tsd-returns-title">Returns <a href="client.Client.html" class="tsd-signature-type tsd-kind-class">Client</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="eventemitter.TypedEventEmitter.html">TypedEventEmitter</a>.<a href="eventemitter.TypedEventEmitter.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L44">src/client.ts:44</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L40">src/client.ts:40</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="config" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>config</span><a href="#config" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">config</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">ClientConfig</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L44">src/client.ts:44</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L40">src/client.ts:40</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="note" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>note</span><a href="#note" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">note</span><span class="tsd-signature-symbol">:</span> <a href="manager_note.NoteManager.html" class="tsd-signature-type tsd-kind-class">NoteManager</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L38">src/client.ts:38</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L35">src/client.ts:35</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="reaction" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>reaction</span><a href="#reaction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">reaction</span><span class="tsd-signature-symbol">:</span> <a href="manager_reaction.ReactionManager.html" class="tsd-signature-type tsd-kind-class">ReactionManager</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L40">src/client.ts:40</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L37">src/client.ts:37</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="removeAllListeners" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>remove<wbr/>All<wbr/>Listeners</span><a href="#removeAllListeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">remove<wbr/>All<wbr/>Listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures">
+<li class="tsd-signature" id="removeAllListeners.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Remove all listeners, or those of the specified event.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from <a href="eventemitter.TypedEventEmitter.html">TypedEventEmitter</a>.<a href="eventemitter.TypedEventEmitter.html#removeAllListeners">removeAllListeners</a></p>
+<ul>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/eventemitter.ts#L5">src/eventemitter.ts:5</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member"><a id="stream" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>stream</span><a href="#stream" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">stream</span><span class="tsd-signature-symbol">:</span> <a href="stream.Stream.html" class="tsd-signature-type tsd-kind-class">Stream</a></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L38">src/client.ts:38</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="user" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user</span><a href="#user" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">user</span><span class="tsd-signature-symbol">:</span> <a href="manager_user.UserManager.html" class="tsd-signature-type tsd-kind-class">UserManager</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L39">src/client.ts:39</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="websocket" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>websocket</span><a href="#websocket" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">websocket</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">default</span></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L42">src/client.ts:42</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/client.ts#L36">src/client.ts:36</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="emit" class="tsd-anchor"></a>
@@ -102,7 +124,7 @@
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;follow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;notification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reply&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;renote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unfollow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadNotification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadMention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadMentions&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadSpecifiedNote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadSpecifiedNotes&quot;</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;follow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;notification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reply&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;renote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unfollow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadNotification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadMention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadMentions&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadSpecifiedNote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadSpecifiedNotes&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -113,15 +135,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="eventemitter.TypedEventEmitter.html">TypedEventEmitter</a>.<a href="eventemitter.TypedEventEmitter.html#emit">emit</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L6">src/eventemitter.ts:6</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="login" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>login</span><a href="#login" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="login.login-1"><span class="tsd-kind-call-signature">login</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#login.login-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/client.ts#L61">src/client.ts:61</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/eventemitter.ts#L10">src/eventemitter.ts:10</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="off" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>off</span><a href="#off" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -131,7 +145,7 @@
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;follow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;notification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reply&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;renote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unfollow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadNotification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadMention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadMentions&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadSpecifiedNote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadSpecifiedNotes&quot;</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;follow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;notification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reply&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;renote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unfollow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadNotification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadMention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadMentions&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadSpecifiedNote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadSpecifiedNotes&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -153,7 +167,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="eventemitter.TypedEventEmitter.html">TypedEventEmitter</a>.<a href="eventemitter.TypedEventEmitter.html#off">off</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L20">src/eventemitter.ts:20</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/eventemitter.ts#L24">src/eventemitter.ts:24</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="on" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on</span><a href="#on" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -163,7 +177,7 @@
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;follow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;notification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reply&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;renote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unfollow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadNotification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadMention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadMentions&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadSpecifiedNote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadSpecifiedNotes&quot;</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">TEventName</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;follow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;notification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reply&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;renote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unfollow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadNotification&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadMention&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadMentions&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unreadSpecifiedNote&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;readAllUnreadSpecifiedNotes&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -185,7 +199,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="eventemitter.TypedEventEmitter.html">TypedEventEmitter</a>.<a href="eventemitter.TypedEventEmitter.html#on">on</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/05ccd37/src/eventemitter.ts#L13">src/eventemitter.ts:13</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/Allianaab2m/tsmi/blob/92f799d/src/eventemitter.ts#L17">src/eventemitter.ts:17</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -209,10 +223,10 @@
 <li><a href="#config" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>config</span></a></li>
 <li><a href="#note" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>note</span></a></li>
 <li><a href="#reaction" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>reaction</span></a></li>
+<li><a href="#removeAllListeners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a></li>
+<li><a href="#stream" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>stream</span></a></li>
 <li><a href="#user" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>user</span></a></li>
-<li><a href="#websocket" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>websocket</span></a></li>
 <li><a href="#emit" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>emit</span></a></li>
-<li><a href="#login" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>login</span></a></li>
 <li><a href="#off" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>off</span></a></li>
 <li><a href="#on" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>on</span></a></li></ul></div></details></div>
 <div class="site-menu">
@@ -236,6 +250,7 @@
 <li><a href="../modules/models_notification.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>models/notification</span></a></li>
 <li><a href="../modules/models_reaction.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>models/reaction</span></a></li>
 <li><a href="../modules/models_user.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>models/user</span></a></li>
+<li><a href="../modules/stream.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>stream</span></a></li>
 <li><a href="../modules/utils_objFalsyValueRemove.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>utils/obj<wbr/>Falsy<wbr/>Value<wbr/>Remove</span></a></li>
 <li><a href="../modules/websocket.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>websocket</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
