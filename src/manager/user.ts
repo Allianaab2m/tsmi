@@ -84,4 +84,9 @@ export default class UserManager {
 
     return res.map((note) => new Note(note, this.client));
   }
+
+  public async follow(userId: string) {
+    const res = await this.session.request("following/create", { userId })
+    return res
+  }
 }

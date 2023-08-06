@@ -91,4 +91,11 @@ export default interface Endpoints {
     };
     res: void;
   };
+
+  ["following/create"]: {
+    req: {
+      userId: string
+    },
+    res: IUserLite
+  }
 }
