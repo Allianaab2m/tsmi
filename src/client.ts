@@ -6,10 +6,24 @@ import TypedEventEmitter from "./eventemitter";
 import { WsReconnect } from "websocket-reconnect";
 import { WebSocketChannels, webSocketHandler } from "./websocket";
 import { INote } from "./models/note";
+import { IUserLite } from "./models/user";
+import { AnyNotification, MentionNotification } from "./models/notification";
 
 type ClientEventTypes = {
   ready: [me: Client];
   noteCreate: [note: INote, timeline: Omit<WebSocketChannels, "main">];
+  notification: [notification: AnyNotification];
+  mention: [note: INote];
+  reply: [note: INote];
+  renote: [note: INote];
+  follow: [user: IUserLite];
+  followed: [user: IUserLite];
+  unfollow: [user: IUserLite];
+  unreadNotification: [notification: AnyNotification];
+  unreadMention: [notification: MentionNotification];
+  readAllUnreadMentions: [];
+  unreadSpecifiedNote: [note: INote];
+  readAllUnreadSpecifiedNotes: [];
 };
 
 type ClientConfig = {
