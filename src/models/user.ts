@@ -24,6 +24,8 @@ export type IUserLite = {
     faviconUrl: Instance["faviconUrl"];
     themeColor: Instance["themeColor"];
   };
+  isBot: boolean
+  isCat: boolean
 };
 
 export type IUserDetailed = IUserLite & {
@@ -43,8 +45,6 @@ export type IUserDetailed = IUserLite & {
   isAdmin: boolean;
   isBlocked: boolean;
   isBlocking: boolean;
-  isBot: boolean;
-  isCat: boolean;
   isFollowed: boolean;
   isFollowing: boolean;
   isLocked: boolean;
@@ -120,6 +120,14 @@ export class UserLite {
   } | null {
     if (!this.user.instance) return null;
     return this.user.instance;
+  }
+
+  get isBot(): boolean {
+    return this.isBot
+  }
+
+  get isCat(): boolean {
+    return this.isCat
   }
 }
 
