@@ -149,7 +149,7 @@ export class UserDetailed {
   get name(): string {
     return this.user.name;
   }
-  get onlineStatus(): "online" | "acrive" | "offline" | "unknown" {
+  get onlineStatus(): "online" | "active" | "offline" | "unknown" {
     return this.user.onlineStatus;
   }
   get avatarUrl(): string {
