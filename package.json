@@ -12,7 +12,8 @@
   ],
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsc",
     "lint": "eslint src --fix",
     "format": "prettier --write src/",
     "build-docs": "typedoc --plugin typedoc-plugin-rename-defaults --plugin typedoc-theme-hierarchy --theme hierarchy --entryPointStrategy expand src/"
@@ -28,6 +29,7 @@
     "eslint": "8.45.0",
     "eslint-config-prettier": "8.8.0",
     "prettier": "3.0.0",
+    "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "typedoc": "^0.24.8",
     "typedoc-plugin-rename-defaults": "^0.6.5",
