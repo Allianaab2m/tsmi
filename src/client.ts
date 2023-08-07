@@ -3,11 +3,11 @@ import NoteManager from "./manager/note";
 import UserManager from "./manager/user";
 import ReactionManager from "./manager/reaction";
 import TypedEventEmitter from "./eventemitter";
-import Stream from "./stream";
-import { WebSocketChannels } from "./stream";
+import { WebSocketChannels } from "./websocket";
 import { INote } from "./models/note";
 import { IUserLite } from "./models/user";
 import { AnyNotification, MentionNotification } from "./models/notification";
+import { webSocketInit } from "./websocket";
 
 type ClientEventTypes = {
   ready: [me: Client];
@@ -29,13 +29,14 @@ type ClientEventTypes = {
 type ClientConfig = {
   host: string;
   token: string;
+  channels: Array<WebSocketChannels>;
 };
 
 export default class Client extends TypedEventEmitter<ClientEventTypes> {
   public note: NoteManager;
   public user: UserManager;
   public reaction: ReactionManager;
-  public stream: Stream;
+  public loginState: boolean;
 
   constructor(private config: ClientConfig) {
     super();
@@ -43,7 +44,11 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
     this.user = new UserManager(session, this);
     this.note = new NoteManager(session, this);
     this.reaction = new ReactionManager(session, this);
-    // this.websocket = new WsReconnect({ reconnectDelay: 5000 });
-    this.stream = new Stream(this, this.config.host, this.config.token);
+    this.loginState = false;
+  }
+
+  public login() {
+    const { host, token, channels } = this.config;
+    webSocketInit(host, token, channels, this);
   }
 }
