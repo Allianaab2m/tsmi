@@ -53,7 +53,7 @@ export const webSocketInit = (
           return client.emit(
             "noteCreate",
             message.body.body as INote,
-            message.body.id,
+            (message.body.id as string).substring(37),
           );
         case "notification":
           return client.emit(
