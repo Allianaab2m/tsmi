@@ -25,14 +25,12 @@ export const webSocketInit = (
   const websocket = new ws(
     `${host.replace("http", "ws")}/streaming?i=${token}`,
   );
-  console.log("[WS] Connection ID:", uuid);
 
   websocket.on("open", () => {
     if (client.loginState === false) {
       client.loginState = true;
       client.emit("ready", client);
     }
-    console.log("[WS] Opened!!!!!!");
     channels.forEach((c) => {
       console.log("[WS] Connecting:", c);
       websocket.send(
@@ -100,7 +98,7 @@ export const webSocketInit = (
   }, opts.reconnectInterval);
 
   websocket.on("close", () => {
-    console.log("[WS] 接続解除");
+    console.log("[WS] Connection closed. Reconnecting.");
     webSocketInit(host, token, channels, client, { reconnectInterval });
   });
 };
