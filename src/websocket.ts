@@ -17,8 +17,11 @@ export const webSocketInit = (
   token: string,
   channels: Array<WebSocketChannels>,
   client: Client,
+  opts: { reconnectInterval?: number },
 ) => {
   const uuid = uuidv4();
+  const reconnectInterval = opts.reconnectInterval ?? 120 * 1000;
+
   const websocket = new ws(
     `${host.replace("http", "ws")}/streaming?i=${token}`,
   );
@@ -94,10 +97,10 @@ export const webSocketInit = (
 
   setInterval(() => {
     websocket.close();
-  }, 120 * 1000);
+  }, opts.reconnectInterval);
 
   websocket.on("close", () => {
     console.log("[WS] 接続解除");
-    webSocketInit(host, token, channels, client);
+    webSocketInit(host, token, channels, client, { reconnectInterval });
   });
 };

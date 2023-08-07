@@ -30,6 +30,7 @@ type ClientConfig = {
   host: string;
   token: string;
   channels: Array<WebSocketChannels>;
+  reconnectInterval?: number; // ms
 };
 
 export default class Client extends TypedEventEmitter<ClientEventTypes> {
@@ -48,7 +49,7 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
   }
 
   public login() {
-    const { host, token, channels } = this.config;
-    webSocketInit(host, token, channels, this);
+    const { host, token, channels, reconnectInterval } = this.config;
+    webSocketInit(host, token, channels, this, { reconnectInterval });
   }
 }
