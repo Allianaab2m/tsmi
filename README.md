@@ -19,6 +19,7 @@ import Client from "tsmi";
 const client = new Client({
   host: "https://<your-misskey-server-url>",
   token: "<YOUR_TOKEN_HERE>",
+  channels: ["main", "localTimeline", "homeTimeline"],
 });
 
 client.once("ready", async (me) => {
@@ -31,11 +32,5 @@ client.on("noteCreate", (note, timeline) => {
   if (timeline === "localTimeline") {
     console.log(note); // Only take local timeline notes
   }
-});
-
-// equalivant
-
-client.stream.local.on("noteCreate", (note) => {
-  console.log(note);
 });
 ```
