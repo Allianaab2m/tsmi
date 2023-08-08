@@ -2,6 +2,7 @@ import HTTPClient from "./http";
 import NoteManager from "./manager/note";
 import UserManager from "./manager/user";
 import ReactionManager from "./manager/reaction";
+import AdminManager from "./manager/admin";
 import TypedEventEmitter from "./eventemitter";
 import { WebSocketChannels } from "./websocket";
 import { INote } from "./models/note";
@@ -37,6 +38,7 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
   public note: NoteManager;
   public user: UserManager;
   public reaction: ReactionManager;
+  public admin: AdminManager;
   public loginState: boolean;
 
   constructor(private config: ClientConfig) {
@@ -45,6 +47,7 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
     this.user = new UserManager(session, this);
     this.note = new NoteManager(session, this);
     this.reaction = new ReactionManager(session, this);
+    this.admin = new AdminManager(session, this);
     this.loginState = false;
   }
 
