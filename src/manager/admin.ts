@@ -8,8 +8,8 @@ type Merge<T> = {
 
 type AbuseUserReportsRes = Merge<
   & Endpoints["admin/abuse-user-reports"]["res"][number]
-  & { url: string; detail: string; reportNoteId: string }
->[];
+  & { url: string; detail: string; reportNoteId: string | null }
+>;
 
 const commentDistributer = (comment: string) => {
   const [url, , detail] = comment.split("\n"); // [Note: <URL>>, -----, <Detail>]
@@ -33,7 +33,7 @@ export default class AdminManager {
   }: Pick<
     Endpoints["admin/abuse-user-reports"]["req"],
     "limit" | "reporterOrigin" | "targetUserOrigin"
-  >): Promise<AbuseUserReportsRes> {
+  >): Promise<AbuseUserReportsRes[]> {
     const reports = await this.session.request("admin/abuse-user-reports", {
       limit,
       state: null,
@@ -42,9 +42,19 @@ export default class AdminManager {
       forwarded: false,
     });
 
-    return reports.filter((r) => r.resolved === false).map((r) => {
-      const { url, detail, reportNoteId } = commentDistributer(r.comment);
-      return { ...r, url, detail, reportNoteId };
+    const filteredReports = reports.filter((r) => r.resolved === false);
+    const returnArray: AbuseUserReportsRes[] = [];
+    filteredReports.forEach((r) => {
+      if (r.comment.startsWith("Note")) {
+        const { url, detail, reportNoteId } = commentDistributer(r.comment);
+        returnArray.push({ ...r, url, detail, reportNoteId });
+      } else {
+        // おそらくユーザー通報
+        const url = `${this.client.host}/@${r.targetUser.username}`;
+        returnArray.push({ ...r, url, detail: r.comment, reportNoteId: null });
+      }
     });
+
+    return returnArray;
   }
 }
