@@ -40,6 +40,7 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
   public reaction: ReactionManager;
   public admin: AdminManager;
   public loginState: boolean;
+  public host: string;
 
   constructor(private config: ClientConfig) {
     super();
@@ -49,6 +50,7 @@ export default class Client extends TypedEventEmitter<ClientEventTypes> {
     this.reaction = new ReactionManager(session, this);
     this.admin = new AdminManager(session, this);
     this.loginState = false;
+    this.host = config.host;
   }
 
   public login() {
