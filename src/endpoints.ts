@@ -94,8 +94,29 @@ export default interface Endpoints {
 
   ["following/create"]: {
     req: {
-      userId: string
-    },
-    res: IUserLite
-  }
+      userId: string;
+    };
+    res: IUserLite;
+  };
+
+  ["admin/abuse-user-reports"]: {
+    req: {
+      limit: number;
+      state: string | null;
+      reporterOrigin: "conbined" | "local" | "remote";
+      targetUserOrigin: "conbined" | "local" | "remote";
+      forwarded: boolean;
+    };
+    res: {
+      id: string;
+      createdAt: string;
+      comment: string;
+      resolved: boolean;
+      reporterId: IUserLite["id"];
+      targetUserId: IUserLite["id"];
+      assigneeId: IUserLite["id"];
+      reporter: IUserLite;
+      targetUser: IUserLite;
+    }[];
+  };
 }
