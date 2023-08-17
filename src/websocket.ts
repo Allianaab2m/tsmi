@@ -20,7 +20,9 @@ export const webSocketInit = (
   opts: { reconnectInterval?: number },
 ) => {
   const uuid = uuidv4();
-  const reconnectInterval = opts.reconnectInterval ?? 120 * 1000;
+  const reconnectInterval = opts.reconnectInterval
+    ? opts.reconnectInterval
+    : 120 * 1000;
 
   const websocket = new ws(
     `${host.replace("http", "ws")}/streaming?i=${token}`,
@@ -95,7 +97,7 @@ export const webSocketInit = (
 
   setInterval(() => {
     websocket.close();
-  }, opts.reconnectInterval);
+  }, reconnectInterval);
 
   websocket.on("close", () => {
     console.log("[WS] Connection closed. Reconnecting.");
