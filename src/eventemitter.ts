@@ -21,6 +21,13 @@ export default class TypedEventEmitter<TEvents extends Record<string, any>> {
     this.emitter.on(eventName, handler as any);
   }
 
+  once<TEventName extends keyof TEvents & string>(
+    eventName: TEventName,
+    handler: (...eventArt: TEvents[TEventName]) => void,
+  ): void {
+    this.emitter.once(eventName, handler as any);
+  }
+
   off<TEventName extends keyof TEvents & string>(
     eventName: TEventName,
     handler: (...eventArg: TEvents[TEventName]) => void,
